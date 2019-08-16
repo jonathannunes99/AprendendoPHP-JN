@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>contato</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center
+        }
+        
+        .contato {
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column
+        }
+        
+        .field {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px
+        }
+        
+        textarea {
+            height: 150px;
+            ;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <section class="content">
+
+        <div class="contato">
+            <h3>Formulário de Cadastro</h3>
+            <form class="form" method="POST">
+                <label for="">Nome: </label>
+                <input id="campo_nome" type="text" class="field" name="nome" placeholder="Nome">
+                <br>
+                <label for="">Idade: </label>
+                <input id="campo_idade" type="number" class="field" name="idade" placeholder="Idade">
+                <br>
+                <label for="">Sexo: </label>
+                <input id="campo_sexo" type="text" class="field" name="sexo" placeholder="Sexo">
+                <br>
+                <label for="">Data de Nascimento: </label>
+                <input id="campo_datadenascimento" type="text" class="field" name="datadenascimento" placeholder="Data de Nascimento">
+                <br>
+                <label for="">Telefone: </label>
+                <input id="campo_telefone" type="text" class="field" name="telefone" placeholder="Telefone">
+                <br>
+
+                <div onclick="valoresDoFormulario()">Enviar</div>
+
+                <div onclick="limparCampos()">Limpar</div>
+
+
+            </form>
+
+
+
+        </div>
+
+    </section>
+
+</body>
+
+<script>
+    var nome = document.getElementById("campo_nome");
+    var idade = document.getElementById("campo_idade");
+    var sexo = document.getElementById("campo_sexo");
+    var datadenascimento = document.getElementById("campo_datadenascimento");
+    var telefone = document.getElementById("campo_telefone");
+
+    function valoresDoFormulario() {
+        console.log(nome.value);
+        console.log(idade.value);
+        console.log(sexo.value);
+        console.log(datadenascimento.value);
+        console.log(telefone.value);
+
+        limparCampos();
+
+    }
+
+    function limparCampos() {
+        document.nome.value = "";
+        document.idade.value = "";
+        document.sexo.value = "";
+        document.datadenascimento.value = "";
+        telefone.value = "";
+    }
+</script>
+
+</html>
